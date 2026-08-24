@@ -1,0 +1,205 @@
+.crypto-page {
+  margin-top: 80px;
+  min-height: calc(100vh - 80px);
+  padding: 3rem 0 4rem;
+}
+
+.crypto-page .rates-title {
+  font-weight: 700;
+  font-size: clamp(1.7rem, 4vw, 2.5rem);
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  text-align: center;
+  background: linear-gradient(135deg, var(--brand-blue), #b8860b);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.crypto-page .rates-title::after {
+  content: "";
+  display: block;
+  width: 72px;
+  height: 3px;
+  border-radius: 2px;
+  margin: 1.1rem auto 0;
+  background: #ffb347;
+}
+
+.rates-subtitle {
+  margin: 1rem auto 0;
+  max-width: 560px;
+  text-align: center;
+  color: rgba(28, 43, 58, 0.7);
+  font-size: 1.05rem;
+  font-weight: 400;
+}
+
+.update-time {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  width: fit-content;
+  margin: 1.8rem auto 0;
+  padding: 0.55rem 1.3rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--brand-blue);
+  background: #fff;
+  border: 1px solid rgba(13, 60, 105, 0.18);
+  border-radius: 999px;
+  box-shadow: var(--card-shadow);
+}
+
+.pulse-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #22a35a;
+  box-shadow: 0 0 0 0 rgba(34, 163, 90, 0.5);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(34, 163, 90, 0.5);
+  }
+  70% {
+    box-shadow: 0 0 0 9px rgba(34, 163, 90, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(34, 163, 90, 0);
+  }
+}
+
+.liverates-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 280px));
+  align-items: stretch;
+  justify-content: center;
+  gap: 1.8rem;
+  padding: 3rem 4rem;
+}
+
+.rates-container {
+  position: relative;
+  padding: 3.2rem 1.4rem 1.8rem;
+  background: #fff;
+  border: none;
+  border-top: 4px solid #b8860b;
+  box-shadow: var(--card-shadow);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  animation: card-in 0.45s ease both;
+}
+
+.rates-container:hover {
+  transform: translateY(-6px);
+  border-top-color: #ffb347;
+  box-shadow: 0 16px 36px rgba(15, 40, 70, 0.18);
+}
+
+@keyframes card-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.currency-code {
+  position: absolute;
+  top: 1.1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0.25rem 0.9rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: #3d2b00;
+  background: linear-gradient(135deg, #ffd97a, #ffb347);
+  border-radius: 999px;
+}
+
+.rates-text p {
+  margin: 0;
+  text-align: center;
+}
+
+.currency-name {
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: rgba(28, 43, 58, 0.75);
+}
+
+.rate-value {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--brand-maroon);
+  letter-spacing: 0.02em;
+}
+
+.per-unit {
+  margin-top: 0.4rem !important;
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: rgba(28, 43, 58, 0.55);
+}
+
+.rates-error {
+  grid-column: 1 / -1;
+  text-align: center;
+  font-size: 1.15rem;
+  color: var(--brand-maroon-bright);
+  background: #fff;
+  border: 1px dashed rgba(192, 16, 69, 0.4);
+  border-radius: 16px;
+  padding: 2.5rem 2rem;
+  margin: 0 auto;
+}
+
+body.night-mode .rates-subtitle,
+body.night-mode .per-unit {
+  color: rgba(232, 237, 244, 0.65);
+}
+
+body.night-mode .currency-name {
+  color: rgba(232, 237, 244, 0.75);
+}
+
+body.night-mode .update-time {
+  background: #1c2430;
+  border-color: rgba(232, 237, 244, 0.14);
+  color: var(--ink);
+}
+
+body.night-mode .rates-container {
+  background: #1c2430;
+}
+
+body.night-mode .rates-error {
+  background: #1c2430;
+  color: #ff6b93;
+}
+
+@media screen and (max-width: 700px) {
+  .liverates-container {
+    padding: 2.5rem 1.4rem;
+    gap: 1.4rem;
+  }
+
+  .crypto-page {
+    padding-top: 2rem;
+  }
+
+  .crypto-page .rates-title {
+    letter-spacing: 0.18em;
+  }
+}
