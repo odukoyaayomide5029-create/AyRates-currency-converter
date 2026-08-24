@@ -1,0 +1,145 @@
+.privacy-page {
+  background: linear-gradient(135deg, #0d3c69 0%, #14497e 45%, #8f2450 100%);
+  color: #fff;
+  margin-top: 80px;
+  min-height: calc(100vh - 80px);
+  padding: 3.5rem 1.5rem 4.5rem;
+}
+
+.privacy-title {
+  margin: 0;
+  font-weight: 700;
+  font-size: clamp(1.7rem, 4vw, 2.5rem);
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+}
+
+.privacy-title::after {
+  content: "";
+  display: block;
+  width: 72px;
+  height: 3px;
+  border-radius: 2px;
+  margin: 1.2rem auto 2.6rem;
+  background: #ffb347;
+}
+
+.privacy-card {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 2.8rem 2.6rem;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 22px;
+  backdrop-filter: blur(4px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+}
+
+.last-updated {
+  margin: 0 0 1.6rem;
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.privacy-intro {
+  margin: 0 0 2.4rem;
+  font-size: 1.05rem;
+  font-weight: 300;
+  line-height: 1.9;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.privacy-card section {
+  padding-top: 1.8rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.privacy-card h2 {
+  position: relative;
+  margin: 0 0 1rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: #ffb347;
+}
+
+.privacy-card h2::before {
+  content: "";
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  margin-right: 0.7rem;
+  border-radius: 4px;
+  background: linear-gradient(135deg, #ffd97a, #ffb347);
+  transform: rotate(45deg) translateY(-1px);
+}
+
+.privacy-card p {
+  margin: 0;
+  font-size: 1.05rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 1.9;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.privacy-card ul {
+  margin: 0;
+  padding-left: 1.4rem;
+  display: grid;
+  gap: 0.55rem;
+}
+
+.privacy-card li {
+  font-size: 1.02rem;
+  font-weight: 300;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.privacy-card li::marker {
+  color: #ffb347;
+}
+
+.privacy-card a {
+  color: #ffd97a;
+  font-weight: 400;
+  text-decoration: none;
+  border-bottom: 1px dashed rgba(255, 217, 122, 0.6);
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.privacy-card a:hover {
+  color: #fff;
+  border-bottom-color: #fff;
+}
+
+.disclaimer {
+  margin-top: 2.4rem !important;
+  padding: 1.1rem 1.3rem;
+  background: rgba(255, 179, 71, 0.12);
+  border-left: 3px solid #ffb347;
+  border-radius: 10px;
+  font-size: 0.95rem !important;
+  color: rgba(255, 255, 255, 0.75) !important;
+}
+
+body.night-mode .privacy-page {
+  background: linear-gradient(135deg, #0a1420 0%, #101d30 55%, #38132a 100%);
+}
+
+@media screen and (max-width: 700px) {
+  .privacy-page {
+    padding: 2.5rem 1.2rem 3.5rem;
+  }
+
+  .privacy-title {
+    letter-spacing: 0.18em;
+  }
+
+  .privacy-card {
+    padding: 2rem 1.6rem;
+  }
+}
