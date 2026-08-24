@@ -1,0 +1,12 @@
+/* Spinner.css */
+.spinner-icon {
+  display: block;
+  margin:0 auto;
+  color: #333; 
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
