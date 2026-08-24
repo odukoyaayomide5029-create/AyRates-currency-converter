@@ -1,0 +1,502 @@
+main {
+  margin-top: 80px;
+  height:auto;
+}
+
+
+
+.quotes-section {
+  width: min(90%, 860px);
+  margin: 0 auto;
+  padding: 3rem 0 5rem;
+}
+
+.quotes-header {
+  text-align: center;
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  margin: 0 0 1.4rem;
+  background: linear-gradient(135deg, var(--brand-blue), var(--brand-maroon));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.quotes {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  color: var(--ink);
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1.75;
+  padding: 2.6rem 2.8rem;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: var(--card-shadow);
+  border-top: 4px solid var(--brand-maroon);
+  animation: quote-in 0.5s ease;
+}
+
+.quotes::before {
+  content: "\201C";
+  position: absolute;
+  top: -0.4rem;
+  left: 1.2rem;
+  font-size: 5rem;
+  line-height: 1;
+  color: rgba(117, 24, 63, 0.425);
+  font-family: Georgia, serif;
+}
+
+@keyframes quote-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+.currency-calc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.6rem;
+  width:100%;
+  background: linear-gradient(135deg, #0d3c69 0%, #14497e 45%, #8f2450 100%);
+  padding: 4rem 1.5rem;
+  box-shadow: inset 0 0 80px rgba(0, 0, 0, 0.18);
+}
+
+.from-currency-input {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  width:min(90%,500px);
+  min-width: 0;
+ 
+  margin: 0;
+  padding: 1rem 1.3rem;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(6px);
+  transition: background 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.from-currency-input:hover {
+  background: rgba(255, 255, 255, 0.17);
+}
+
+.from-currency-input:focus-within {
+  border-color: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.14);
+}
+
+legend {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.85);
+  padding: 0 0.5rem;
+}
+
+.from-currency-input input {
+  flex: 1;
+  min-width: 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #fff;
+  font-family: inherit;
+  font-size: 1.35rem;
+  font-weight: 600;
+  padding: 0.5rem 0.2rem;
+}
+
+.from-currency-input input::placeholder {
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.from-currency-input input::-webkit-outer-spin-button,
+.from-currency-input input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.from-currency-input input[type="number"] {
+  appearance: textfield;
+  -moz-appearance: textfield;
+}
+
+.from-currency-input select {
+  border: none;
+  outline: none;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  color: var(--brand-blue);
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 0.7rem 0.9rem;
+  min-width: 0;
+  max-width: 55%;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.from-currency-input select:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+}
+
+.conversion-rate {
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 0.06em;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.22);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(4px);
+  padding: 0.75rem 1.6rem;
+  border-radius: 999px;
+  margin: 0;
+}
+
+
+
+.whatweoffer {
+  padding: 4rem 1.5rem;
+  background:
+    radial-gradient(900px 320px at 88% -10%, rgba(143, 36, 80, 0.09), transparent),
+    radial-gradient(800px 300px at 8% 110%, rgba(13, 60, 105, 0.09), transparent),
+    #faf7f8;
+}
+
+.image-header h2 {
+  text-align: center;
+  margin: 0 0 2.6rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--brand-blue);
+}
+
+.image-header h2::after {
+  content: "";
+  display: block;
+  width: 64px;
+  height: 3px;
+  border-radius: 2px;
+  margin: 0.9rem auto 0;
+  background: linear-gradient(135deg, var(--brand-blue), var(--brand-maroon));
+}
+
+.img-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  justify-content: center;
+  align-items: stretch;
+  gap: 2rem;
+  width: min(1000px, 95%);
+  margin: 0 auto;
+}
+
+.img-container > div {
+  display: grid;
+  justify-items: center;
+  align-content: start;
+  gap: 1.3rem;
+  background: #fff;
+  border-radius: 22px;
+  padding: 2.2rem 2rem;
+  box-shadow: var(--card-shadow);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.img-container > div:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 44px rgba(15, 40, 70, 0.18);
+}
+
+.image-wrapper {
+  width: 11rem;
+  height: 11rem;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(15, 40, 70, 0.16);
+}
+
+.dollar-img,
+.currency-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.img-container > div:hover .dollar-img,
+.img-container > div:hover .currency-img {
+  transform: scale(1.07);
+}
+
+.img-container div ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.7rem;
+}
+
+.img-container div ul li {
+  position: relative;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.6;
+  color: var(--ink);
+  padding-left: 1.5rem;
+}
+
+.img-container div ul li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.5em;
+  width: 0.62em;
+  height: 0.62em;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--brand-blue), var(--brand-maroon));
+}
+
+
+
+.site-footer {
+  background: linear-gradient(135deg, #0a1420 0%, #12233a 55%, #40152e 100%);
+  color: #fff;
+  padding: 3.5rem 5vw 2rem;
+  display: grid;
+  gap: 2.6rem;
+}
+
+.footer-brand h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+}
+
+.footer-brand p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.footer-links {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 2rem;
+}
+
+.footer-column h4 {
+  margin: 0 0 0.9rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  color: #ffb347;
+}
+
+.footer-column ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.55rem;
+}
+
+.footer-column a {
+  position: relative;
+  color: rgba(255, 255, 255, 0.82);
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.25s ease;
+}
+
+.footer-column a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 100%;
+  height: 1px;
+  background: #ffb347;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s ease;
+}
+
+.footer-column a:hover {
+  color: #fff;
+}
+
+.footer-column a:hover::after {
+  transform: scaleX(1);
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  padding-top: 1.3rem;
+}
+
+.footer-bottom p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+
+
+body.night-mode .quotes {
+  background: #1a2436;
+  border-top-color: var(--brand-maroon-bright);
+}
+
+body.night-mode .quotes-header {
+  background: linear-gradient(135deg, #7db4e8, #ff7aa8);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+body.night-mode .whatweoffer {
+  background:
+    radial-gradient(900px 320px at 88% -10%, rgba(192, 16, 69, 0.12), transparent),
+    radial-gradient(800px 300px at 8% 110%, rgba(60, 120, 190, 0.1), transparent),
+    #121212;
+}
+
+body.night-mode .image-header h2 {
+  color: #a8c8ea;
+}
+
+body.night-mode .img-container > div {
+  background: #1a2436;
+}
+
+body.night-mode .img-container div ul li {
+  color: var(--ink);
+}
+
+
+
+@media screen and (max-width: 700px) {
+  .quotes-section {
+    width: 92%;
+    padding-top: 2rem;
+  }
+
+  .quotes-header {
+    font-size: 1.35rem;
+  }
+
+  .quotes {
+    font-size: 1.5rem;
+    padding: 2rem 1.8rem;
+  }
+
+  .currency-calc {
+    padding: 3rem 1.2rem;
+    gap: 1.3rem;
+  }
+
+  legend {
+    font-size: 1.05rem;
+  }
+
+  .from-currency-input input {
+    font-size: 1.6rem;
+  }
+
+  .from-currency-input select {
+    font-size: 1.25rem;
+    padding: 0.6rem 0.7rem;
+  }
+
+  .conversion-rate {
+    font-size: 1.25rem;
+  }
+
+  .whatweoffer {
+    padding: 3rem 1.2rem;
+  }
+
+  .image-header h2 {
+    font-size: 1.35rem;
+  }
+
+  .img-container div ul li {
+    font-size: 1.25rem;
+  }
+
+  .site-footer {
+    padding: 2.8rem 1.4rem 1.6rem;
+  }
+
+  .footer-brand h3 {
+    font-size: 1.5rem;
+  }
+
+  .footer-brand p {
+    font-size: 1.2rem;
+  }
+
+  .footer-column h4 {
+    font-size: 1.1rem;
+  }
+
+  .footer-column a {
+    font-size: 1.2rem;
+  }
+
+  .footer-bottom p {
+    font-size: 1.1rem;
+  }
+}
+.error-text{
+color:white;
+font-size: 1.5rem;
+
+}
+
+@media screen and (max-width: 480px) {
+  .from-currency-input {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.8rem;
+    width: min(94%, 500px);
+    padding: 1.2rem 1.1rem;
+  }
+
+  .from-currency-input input {
+    width: 100%;
+    text-align: center;
+    font-size: 1.7rem;
+  }
+
+  .from-currency-input select {
+    max-width: 100%;
+    width: 100%;
+    font-size: 1.15rem;
+  }
+}
