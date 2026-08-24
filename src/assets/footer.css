@@ -1,0 +1,88 @@
+.site-footer {
+  background: linear-gradient(135deg, #0a1420 0%, #12233a 55%, #40152e 100%);
+  color: #fff;
+  padding: 4rem 5rem 2.5rem;
+  display: grid;
+  gap: 2.6rem;
+}
+
+.footer-brand h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+}
+
+.footer-brand p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.footer-links {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  
+}
+
+.footer-column h4 {
+  margin: 0 0 0.9rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  color: #ffb347;
+}
+
+.footer-column ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.55rem;
+}
+
+.footer-column a {
+  position: relative;
+  display: inline-block;
+  padding: 0 4px  0 0px;
+  color: rgba(255, 255, 255, 0.82);
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.25s ease;
+}
+
+.footer-column a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 2px;
+  width: calc(100% - 4px);
+  height: 1px;
+  background: #ffb347;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s ease;
+}
+
+@media (hover: hover) {
+  .footer-column a:hover {
+    color: #fff;
+  }
+
+  .footer-column a:hover::after {
+    transform: scaleX(1);
+  }
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  padding-top: 1.3rem;
+}
+
+.footer-bottom p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+

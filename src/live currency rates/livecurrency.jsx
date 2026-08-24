@@ -29,7 +29,7 @@ return(
         <span className="currency-code">{code.toUpperCase()}</span>
         <div className="rates-text">
           <p className="currency-name">{popularCurrencies[code]}</p>
-          <p className="rate-value">&#8358;{value.toFixed(2)}</p>
+          <p className="rate-value">&#8358;{value.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</p>
           <p className="per-unit">per 1 {code.toUpperCase()}</p>
         </div>
       </div>

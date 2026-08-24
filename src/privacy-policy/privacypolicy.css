@@ -1,15 +1,21 @@
+*{
+margin:0;
+}
+
 .privacy-page {
   background: linear-gradient(135deg, #0d3c69 0%, #14497e 45%, #8f2450 100%);
   color: #fff;
-  margin-top: 80px;
-  min-height: calc(100vh - 80px);
-  padding: 3.5rem 1.5rem 4.5rem;
+  margin-top: 60px;
+
+  height:auto;
+  padding: 5rem ;
+  
 }
 
 .privacy-title {
   margin: 0;
   font-weight: 700;
-  font-size: clamp(1.7rem, 4vw, 2.5rem);
+  font-size: 2.5rem;
   letter-spacing: 0.3em;
   text-transform: uppercase;
   text-align: center;
@@ -41,6 +47,7 @@
   margin: 0 0 1.6rem;
   font-size: 0.95rem;
   color: rgba(255, 255, 255, 0.65);
+  font-weight: 900;
 }
 
 .privacy-intro {
@@ -81,13 +88,13 @@
   font-size: 1.05rem;
   font-style: normal;
   font-weight: 300;
-  line-height: 1.9;
+  
   color: rgba(255, 255, 255, 0.92);
 }
 
 .privacy-card ul {
   margin: 0;
-  padding-left: 1.4rem;
+  padding-left: 1.8rem;
   display: grid;
   gap: 0.55rem;
 }
@@ -111,9 +118,11 @@
   transition: color 0.2s ease, border-color 0.2s ease;
 }
 
-.privacy-card a:hover {
-  color: #fff;
-  border-bottom-color: #fff;
+@media (hover: hover) {
+  .privacy-card a:hover {
+    color: #fff;
+    border-bottom-color: #fff;
+  }
 }
 
 .disclaimer {

@@ -3,7 +3,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.75rem 5rem;
+   padding: 0.75rem 5rem;
   color: #fff;
   position: fixed;
   top: 0;
@@ -36,11 +36,13 @@
   color:white;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
+
 }
 
-.brand:hover .logo {
+.brand:hover .logo  {
   transform: scale(1.08) ;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35), inset 0 0 10px rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35), inset 0 0 10px rgba(197, 10, 10, 0.2);
+  
 }
 
 .name {
@@ -78,29 +80,11 @@
   text-decoration: none;
 }
 
-.nav-link::after {
-  content: "";
-  position: absolute;
-  left: 0.35rem;
-  right: 0.35rem;
-  bottom: -0.15rem;
-  height: 2px;
-  border-radius: 2px;
-  background: rgba(255, 255, 255, 0.9);
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.25s ease;
-}
-
-.nav-link:hover::after,
-.nav-link.active::after {
-  transform: scaleX(1);
-}
-
-.nav-link:hover,
-.home-icon:hover,
-.menu-btn:hover {
-  opacity: 0.82;
+.home-icon,
+.menu-btn {
+  min-width: 44px;
+  min-height: 44px;
+  justify-content: center;
 }
 
 .menu-btn {
@@ -108,10 +92,45 @@
   transition: background 0.25s ease, transform 0.25s ease, opacity 0.25s ease;
 }
 
-.menu-btn:hover {
-  background: rgba(255, 255, 255, 0.14);
-  transform: translateY(-2px);
-  opacity: 1;
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0.35rem;
+  right: 0.35rem;
+  bottom: -0.05rem;
+  height: 2px;
+  border-radius: 2px;
+  background: rgba(255, 255, 255, 0.9);
+  transform: scaleX(0);
+  transform-origin: top;
+  transition: transform 0.25s ease;
+}
+
+.nav-link.active::after {
+  transform: scaleX(1);
+}
+
+@media (hover: hover) {
+  .brand:hover .logo {
+    transform: scale(1.08) ;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35), inset 0 0 10px rgba(255, 255, 255, 0.2);
+  }
+
+  .nav-link:hover::after {
+    transform: scaleX(1);
+  }
+
+  .nav-link:hover,
+  .home-icon:hover,
+  .menu-btn:hover {
+    opacity: 0.82;
+  }
+
+  .menu-btn:hover {
+    background: rgba(255, 255, 255, 0.14);
+    transform: translateY(-2px);
+    opacity: 1;
+  }
 }
 
 .side-panel-overlay {
@@ -145,13 +164,14 @@
   display: flex;
   flex-direction: column;
   gap: 0.4rem;
-  transform: translateX(100%);
-  transition: transform 0.3s ease, background 0.4s ease;
+  opacity: 0;
+ 
+  transition: opacity 1s ease, background 0.4s ease;
   color: #fff;
 }
 
 .side-panel-overlay.open .side-panel {
-  transform: translateX(0);
+  opacity:1;
 }
 
 .panel-brand {
@@ -182,8 +202,10 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 2.4rem;
-  height: 2.4rem;
+  width: max(2.4rem, 44px);
+  height: max(2.4rem, 44px);
+  min-width: 44px;
+  min-height: 44px;
   border-radius: 50%;
   background: transparent;
   border: 1.5px solid rgba(255, 255, 255, 0.6);
@@ -193,25 +215,30 @@
   transition: background 0.25s ease, transform 0.25s ease;
 }
 
-.close-btn:hover {
-  background: rgba(255, 255, 255, 0.15);
-  transform: rotate(90deg);
+@media (hover: hover) {
+  .close-btn:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: rotate(90deg);
+  }
 }
 
 .side-panel a {
+  display: block;
   font-size: 1.05rem;
   font-weight: 500;
   letter-spacing: 0.03em;
   text-decoration: none;
   color: #fff;
-  padding: 1.1rem 0.6rem;
+  padding: max(1.1rem, 13px) 10px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.25);
   transition: padding-left 0.25s ease, background 0.25s ease;
 }
 
-.side-panel a:hover {
-  padding-left: 1.2rem;
-  background: rgba(255, 255, 255, 0.08);
+@media (hover: hover) {
+  .side-panel a:hover {
+    padding-left: 1.2rem;
+    background: rgba(255, 255, 255, 0.08);
+  }
 }
 
 .night-toggle {
@@ -220,7 +247,7 @@
   justify-content: space-between;
   gap: 1rem;
   margin-top: 1.4rem;
-  padding: 1.1rem 0.6rem;
+  padding: max(1.1rem, 13px) 8px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.25);
   cursor: pointer;
 }
@@ -275,17 +302,7 @@
   transform: translateX(22px);
 }
 
-.nav-link:focus-visible,
-.home-icon:focus-visible,
-.menu-btn:focus-visible,
-.close-btn:focus-visible,
-.side-panel a:focus-visible,
-.brand:focus-visible,
-.switch input:focus-visible + .knob {
-  outline: 2px solid #fff;
-  outline-offset: 3px;
-  border-radius: 4px;
-}
+
 
 @media screen and (max-width: 700px) {
   .header {
@@ -309,6 +326,7 @@
 
   .nav-link {
     font-size: 1.35rem;
+    padding: 12px 6px;
   }
 
   .side-panel a,

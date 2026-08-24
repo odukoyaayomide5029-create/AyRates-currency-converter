@@ -1,12 +1,12 @@
 .crypto-page {
   margin-top: 80px;
-  min-height: calc(100vh - 80px);
+ 
   padding: 3rem 0 4rem;
 }
 
 .crypto-page .rates-title {
   font-weight: 700;
-  font-size: clamp(1.7rem, 4vw, 2.5rem);
+  font-size: 3rem;
   letter-spacing: 0.3em;
   text-transform: uppercase;
   text-align: center;
@@ -75,7 +75,7 @@
 
 .liverates-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 280px));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 350px));
   align-items: stretch;
   justify-content: center;
   gap: 1.8rem;
@@ -97,10 +97,12 @@
   animation: card-in 0.45s ease both;
 }
 
-.rates-container:hover {
-  transform: translateY(-6px);
-  border-top-color: #ffb347;
-  box-shadow: 0 16px 36px rgba(15, 40, 70, 0.18);
+@media (hover: hover) {
+  .rates-container:hover {
+    transform: translateY(-6px);
+    border-top-color: #ffb347;
+    box-shadow: 0 16px 36px rgba(15, 40, 70, 0.18);
+  }
 }
 
 @keyframes card-in {

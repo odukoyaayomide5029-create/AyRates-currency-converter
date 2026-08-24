@@ -29,6 +29,14 @@ body {
   color: #fff;
 }
 
+a,
+button,
+select,
+input,
+label {
+  touch-action: manipulation;
+}
+
 body.night-mode {
   --ink: #e8edf4;
   --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
@@ -37,21 +45,21 @@ body.night-mode {
 }
 @media screen and (max-width: 800px) {
   html {
-    font-size: 65.5%;
+    font-size: 78.5%;
   }
 }
 @media screen and (max-width: 600px) {
   html {
-    font-size: 53.5%;
+    font-size: 60.5%;
   }
 }
 @media screen and (max-width: 450px) {
   html {
-    font-size: 30%;
+    font-size: 48%;
   }
 }
 @media screen and (max-width: 380px) {
   html {
-    font-size: 28%;
+    font-size: 35%;
   }
 }

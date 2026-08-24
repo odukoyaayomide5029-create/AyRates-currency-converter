@@ -129,7 +129,7 @@ const [currencyData, setCurrencyData] = useState({})
   useEffect(() => {
     if (!currencyData[currencyNames]) return;
     
-    setConvertedCurr((currencyNumber * currencyData[currencyNames]).toFixed(3))
+    setConvertedCurr((currencyNumber * currencyData[currencyNames]).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 }))
   }, [currencyNames, currencyData, currencyNumber, currencyName]
   )
   
@@ -168,14 +168,14 @@ const [currencyData, setCurrencyData] = useState({})
         <p className="conversion-rate">
            {loading && <Spinner />}
           {!loading && currencyData[currencyNames]
-            ? `1 ${currencyName.toUpperCase()} = ${currencyData[currencyNames].toFixed(5)} ${currencyNames.toUpperCase()}`
+            ? `1 ${currencyName.toUpperCase()} = ${currencyData[currencyNames].toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })} ${currencyNames.toUpperCase()}`
             : !loading && hasLoadedOnce
               ? "Loading rate..."
               : null}
         </p>
        <fieldset className="from-currency-input">
   <legend>YOU GET</legend>
-  <input type="number" id="converted-amount" placeholder="1"
+  <input type="text" id="converted-amount" placeholder="1"
     value={convertedCurr} readOnly />
 
   <select
