@@ -45,21 +45,21 @@ body.night-mode {
 }
 @media screen and (max-width: 800px) {
   html {
-    font-size: 78.5%;
+    font-size: 80.5%;
   }
 }
 @media screen and (max-width: 600px) {
   html {
-    font-size: 60.5%;
+    font-size: 70.5%;
   }
 }
 @media screen and (max-width: 450px) {
   html {
-    font-size: 48%;
+    font-size: 60%;
   }
 }
 @media screen and (max-width: 380px) {
   html {
-    font-size: 35%;
+    font-size: 54%;
   }
 }
